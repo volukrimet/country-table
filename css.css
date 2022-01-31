@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+div {
+    display: inline-block;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+table {
+    width: 100%;
+}
+
+#table {
+    display: block;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 5px;
+    max-height: max-content;
+}
+
+img {
+    height: 100%;
+}
