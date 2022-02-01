@@ -18,19 +18,19 @@ function createTd(string) {
 }
 
 function getCountries(response) {
-    btnGet.removeAttr('disabled')
+    btnGet.removeAttr('disabled');
 
-    let countries = response.sort((a, b) => (a.name.common > b.name.common ? 1 : -1))
+    let countries = response.sort((a, b) => (a.name.common > b.name.common ? 1 : -1));
 
     btnGet.on('click', () => {
         const table = $('<table>');
         table.addClass('display');
         table.addClass('cell-border');
-        table.attr('id', 'table_id')
+        table.attr('id', 'table_id');
 
         const thead = $('<thead>');
         const headerRow = $('<tr>');
-        const tbody = $('<tbody>')
+        const tbody = $('<tbody>');
 
         headers.forEach(headerText => {
             let header = $('<th>');
