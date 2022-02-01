@@ -49,7 +49,6 @@ function getCountries(response) {
             appendElement(row, country.cca2);
 
             img.attr('src', country.flags.png);
-            img.attr('width', 200);
             imgCell.append(img);
             imgCell.css({ padding: 0 });
             row.append(imgCell);
@@ -69,7 +68,7 @@ function getCountries(response) {
         btnGet.css('display', 'none');
 
         $(function() {
-            $('#table_id').dataTable();
+            $('#table_id').DataTable();
         });
     });
 }
