@@ -24,15 +24,22 @@ function getCountries(response) {
 
     btnGet.on('click', () => {
         const table = $('<table>');
+        table.addClass('display');
+        table.addClass('cell-border');
+        table.attr('id', 'table_id')
+
+        const thead = $('<thead>');
         const headerRow = $('<tr>');
+        const tbody = $('<tbody>')
 
         headers.forEach(headerText => {
             let header = $('<th>');
             header.text(headerText);
             headerRow.append(header);
+            thead.append(headerRow);
         });
 
-        table.append(headerRow);
+        table.append(thead);
 
         countries.forEach(country => {
             let row = $('<tr>');
@@ -55,11 +62,14 @@ function getCountries(response) {
 
             appendElement(row, country.population);
 
-            table.append(row);
-
-
+            tbody.append(row);
+            table.append(tbody);
         })
         myTable.append(table);
         btnGet.css('display', 'none');
+
+        $(function() {
+            $('#table_id').dataTable();
+        });
     });
 }
